@@ -19,9 +19,9 @@ export const site = {
   description:
     "VERITAS는 추론·검색·검증·저장을 모두 내 PC에서 처리하는 로컬 우선 AI 리서치·문서 작성 어시스턴트입니다. 주제만 입력하면 자료조사부터 보고서 초안, 근거 정합성 검증까지 — 사내 자료를 외부로 보내지 않고 하나의 워크스페이스에서. 설치 파일을 받아 실행만 하면 됩니다.",
   // TODO: 배포 도메인 확정 후 교체 (metadataBase / OG / sitemap에 사용)
-  url: "https://veritas-app.vercel.app",
+  url: "https://veritas-web-nu.vercel.app",
   // TODO: 공개 저장소 주소로 교체 (선택)
-  github: "https://github.com/2026-1-CAU-Capstone-Design-Team2",
+  github: "https://github.com/2026-1-CAU-Capstone-Design-Team2/veritas",
 } as const;
 
 /* ------------------------------------------------------------------ */
