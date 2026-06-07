@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0b2239;
+  --foreground: #eaf2fb;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem; /* offset for sticky navbar anchor jumps */
+    -webkit-text-size-adjust: 100%;
+    overflow-x: clip; /* guard against decorative glows widening the page */
+  }
+
+  body {
+    @apply bg-navy text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip; /* contain decorative glows so they never cause horizontal scroll */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.3);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-sky ring-offset-2 ring-offset-navy;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  .text-gradient-animated {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+    background-size: 200% auto;
+    @apply animate-gradient-x;
+  }
+
+  /* Subtle dotted grid background */
+  .bg-grid {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+
+  /* Fade a background out toward the edges */
+  .mask-fade-y {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+  }
+
+  .mask-fade-edges {
+    -webkit-mask-image: radial-gradient(
+      ellipse 70% 70% at 50% 40%,
+      black 55%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 70% 70% at 50% 40%,
+      black 55%,
+      transparent 100%
+    );
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  /* Hides scrollbar but keeps scroll (for horizontal step rails on mobile) */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
