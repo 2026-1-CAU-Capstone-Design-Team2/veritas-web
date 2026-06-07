@@ -40,7 +40,7 @@ export function Hero() {
 
           <StaggerItem>
             <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl lg:text-[3.6rem]">
-              주제만 주면, 조사 · 작성 · 검증을 —
+              주제만 주면, 조사 · 작성 · 검증을
               <br className="hidden sm:block" />{" "}
               <span className="text-gradient">전부 내 PC 안에서.</span>
             </h1>
