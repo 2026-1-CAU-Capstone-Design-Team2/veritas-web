@@ -29,9 +29,9 @@ export const site = {
 /* ------------------------------------------------------------------ */
 
 export const download = {
-  version: "1.0.0",
+  version: "0.0.3",
   // TODO: 릴리스 에셋 크기로 교체 (예: "약 280 MB")
-  fileSize: "약 300 MB",
+  fileSize: "약 400 MB",
   os: "Windows 10 / 11 (64-bit)",
   // 릴리스 페이지로 직접 연결되는 안정 링크.
   // TODO: 단일 .exe 직링크가 준비되면 아래를 에셋 URL로 교체
@@ -43,7 +43,7 @@ export const systemRequirements: { label: string; value: string }[] = [
   { label: "운영체제", value: "Windows 10 / 11 (64-bit)" },
   { label: "디스크 여유 공간", value: "약 1–6 GB (선택한 모델 크기에 따라)" },
   // TODO: 권장 사양 확정 시 교체
-  { label: "메모리(RAM)", value: "8 GB 이상 권장" },
+  { label: "메모리(RAM)", value: "16 GB 이상 권장" },
   { label: "그래픽(GPU)", value: "선택 — CPU만으로도 동작" },
 ];
 
@@ -184,8 +184,8 @@ export const benchmark = {
     rows: [
       { model: "gpt-5-mini", score: 42.0, delta: 2.5, local: false },
       { model: "gpt-4o-mini", score: 40.0, delta: 2.0, local: false },
-      { model: "qwen3.5-9B", score: 39.0, delta: 3.2, local: true },
-      { model: "gpt-5-nano", score: 37.5, delta: 3.5, local: false },
+      { model: "qwen3.5-9B", score: 40.5, delta: 4.7, local: true },
+      { model: "gpt-5-nano", score: 38.3, delta: 4.3, local: false },
       { model: "qwen3.5-4B", score: 35.0, delta: 3.8, local: true },
       { model: "qwen3.5-2B", score: 30.5, delta: 2.8, local: true },
     ] as RaceRow[],
