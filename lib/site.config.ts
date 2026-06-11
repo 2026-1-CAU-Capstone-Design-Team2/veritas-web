@@ -202,7 +202,7 @@ export const benchmark = {
       { model: "qwen3.5-2B", value: 62, local: true },
     ] as FactRow[],
   },
-  callout: "qwen3.5-9B + AutoSurvey (39.0) ≈ gpt-5-mini 단발 검색 (39.5)",
+  callout: "qwen3.5-9B + AutoSurvey (40.5) ≈ gpt-5-mini 단발 검색 (39.5)",
   footnote:
     "자체 평가(DeepResearch Bench · RACE) 기준. 수치는 평가 환경에 따라 달라질 수 있습니다.",
 } as const;
